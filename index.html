@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasadnik Sunašce | Priroda u vašem dvorištu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Rasadnik Sunašce</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Početna</a></li>
+            <li><a href="#o-nama">O nama</a></li>
+            <li><a href="#galerija">Galerija</a></li>
+            <li><a href="#ponuda">Ponuda</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero">
+        <h1 class="fade-in">Rasadnik Sunašce</h1>
+        <p class="fade-in" style="transition-delay: 0.2s;">Priroda u vašem dvorištu</p>
+        <a href="#ponuda" class="btn fade-in" style="transition-delay: 0.4s;">Pogledaj ponudu</a>
+    </header>
+
+    <section id="o-nama" class="section-padding">
+        <div class="about-text fade-in">
+            <h2>O nama</h2>
+            <p>Dobrodošli u Rasadnik Sunašce, porodični rasadnik gde gajimo biljke sa puno ljubavi i pažnje. Naša strast prema prirodi prevodi se u visok kvalitet svake sadnice koju pažljivo negujemo.</p>
+            <br>
+            <p>Bez obzira da li tražite ukrasno bilje za osveženje vašeg vrta, prelepo cveće ili voćne sadnice, tu smo da vam pružimo ne samo kvalitetne biljke, već i stručne savete kako bi vaše dvorište zablistalo u punom sjaju.</p>
+        </div>
+        <div class="about-img fade-in">
+            <img src="img/img2.jpg" alt="Naš rasadnik">
+        </div>
+    </section>
+
+    <section id="galerija" class="section-padding">
+        <h2>Galerija</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in"><img src="img/img1.jpg" alt="Biljka 1" onclick="openLightbox(this.src)"></div>
+            <div class="gallery-item fade-in" style="transition-delay: 0.1s;"><img src="img/img2.jpg" alt="Biljka 2" onclick="openLightbox(this.src)"></div>
+            <div class="gallery-item fade-in" style="transition-delay: 0.2s;"><img src="img/img3.jpg" alt="Biljka 3" onclick="openLightbox(this.src)"></div>
+            <div class="gallery-item fade-in" style="transition-delay: 0.3s;"><img src="img/img4.jpg" alt="Biljka 4" onclick="openLightbox(this.src)"></div>
+            <div class="gallery-item fade-in" style="transition-delay: 0.4s;"><img src="img/img5.jpg" alt="Biljka 5" onclick="openLightbox(this.src)"></div>
+            <div class="gallery-item fade-in" style="transition-delay: 0.5s;"><img src="img/img6.jpg" alt="Biljka 6" onclick="openLightbox(this.src)"></div>
+            <div class="gallery-item fade-in" style="transition-delay: 0.6s;"><img src="img/img7.jpg" alt="Biljka 7" onclick="openLightbox(this.src)"></div>
+            <div class="gallery-item fade-in" style="transition-delay: 0.7s;"><img src="img/img8.jpg" alt="Biljka 8" onclick="openLightbox(this.src)"></div>
+        </div>
+    </section>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">×</span>
+        <img id="lightbox-img" src="" alt="Povećana slika">
+    </div>
+
+    <section id="ponuda" class="section-padding">
+        <h2>Šta nudimo?</h2>
+        <div class="offer-grid">
+            <div class="offer-card fade-in">
+                <div class="offer-icon">🌱</div>
+                <h3>Sadnice</h3>
+                <p>Zdrave i negovane voćne i ukrasne sadnice za vaš voćnjak ili vrt.</p>
+            </div>
+            <div class="offer-card fade-in" style="transition-delay: 0.2s;">
+                <div class="offer-icon">🌸</div>
+                <h3>Cveće</h3>
+                <p>Sezonsko i višegodišnje cveće koje će uneti boje u vaše dvorište.</p>
+            </div>
+            <div class="offer-card fade-in" style="transition-delay: 0.4s;">
+                <div class="offer-icon">🌲</div>
+                <h3>Ukrasno bilje</h3>
+                <p>Raznovrsni četinari i grmlje za savršeno uređenje pejzaža.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="section-padding">
+        <h2>Kontaktirajte nas</h2>
+        <div class="contact-container fade-in">
+            <div class="contact-info">
+                <h3>Informacije</h3>
+                <p><strong>📞 Telefon:</strong> +381 XX XXX XXXX</p>
+                <p><strong>📍 Lokacija:</strong> Булевар patrijarha Germana 7b, Београд 11223</p>
+                <p>Radujemo se vašem pozivu ili poseti. Pratite nas na društvenim mrežama za najnovije ponude i savete o nezi biljaka!</p>
+                
+                <div style="margin: 1.5rem 0; border-radius: 8px; overflow: hidden;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2835.0429776311285!2d20.504300500000003!3d44.718734399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7506626cdcad%3A0xba767908f00c46b1!2sRasadnik%20Sunasce!5e0!3m2!1ssr!2srs!4v1775667930191!5m2!1ssr!2srs" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <a href="https://www.facebook.com/p/Rasadnik-Suna%C5%A1ce-100056245995645/" target="_blank" class="social-link">Posetite naš Facebook profil</a>
+            </div>
+            <div class="contact-form">
+                <form onsubmit="event.preventDefault(); alert('Poruka je uspešno poslata!');">
+                    <div class="form-group">
+                        <input type="text" placeholder="Vaše Ime" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Vaš Telefon" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Vaša Poruka" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Pošalji poruku</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Rasadnik Sunašce. Sva prava zadržana.</p>
+        <p><a href="https://www.facebook.com/p/Rasadnik-Suna%C5%A1ce-100056245995645/" target="_blank">Facebook</a></p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade-in animation on scroll using Intersection Observer
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Lightbox Logic for Gallery
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(src) {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = src;
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
