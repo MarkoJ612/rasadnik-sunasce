@@ -3,27 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rasadnik Sunašce | Priroda u vašem dvorištu</title>
+    <title>Rasadnik Sunašce | Sadnice, Cveće i Ukrasno Bilje – Beograd</title>
+    <meta name="description" content="Rasadnik Sunašce – porodični rasadnik u Beogradu. Prodaja sadnica, cveća, ukrasnog bilja i četinara. Stručni saveti i kvalitetne biljke za vaše dvorište. Radno vreme: svaki dan 08:00–19:00.">
+    <meta name="keywords" content="rasadnik Beograd, sadnice, cveće, ukrasno bilje, četinari, grmlje, voćne sadnice, rasadnik Sunašce, biljke Beograd, uređenje vrta">
+    <meta name="author" content="Rasadnik Sunašce">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rasadniksunasce.com/">
+
+    <!-- Open Graph (Facebook, Viber, WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rasadniksunasce.com/">
+    <meta property="og:title" content="Rasadnik Sunašce | Sadnice, Cveće i Ukrasno Bilje – Beograd">
+    <meta property="og:description" content="Porodični rasadnik u Beogradu. Prodaja sadnica, cveća i ukrasnog bilja. Stručni saveti. Radno vreme: svaki dan 08:00–19:00.">
+    <meta property="og:image" content="img/img1.jpg">
+    <meta property="og:locale" content="sr_RS">
+    <meta property="og:site_name" content="Rasadnik Sunašce">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rasadnik Sunašce | Sadnice, Cveće i Ukrasno Bilje – Beograd">
+    <meta name="twitter:description" content="Porodični rasadnik u Beogradu. Prodaja sadnica, cveća i ukrasnog bilja. Svaki dan 08:00–19:00.">
+    <meta name="twitter:image" content="img/img1.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Schema.org Local Business structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "name": "Rasadnik Sunašce",
+      "description": "Porodični rasadnik sa sadnicama, cvećem i ukrasnim biljem u Beogradu.",
+      "url": "https://rasadniksunasce.rs/",
+      "telephone": "+381644876477",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bulevar patrijarha Germana 7b",
+        "addressLocality": "Beograd",
+        "postalCode": "11223",
+        "addressCountry": "RS"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.7187344,
+        "longitude": 20.5043005
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "08:00",
+          "closes": "19:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/p/Rasadnik-Suna%C5%A1ce-100056245995645/",
+        "https://www.instagram.com/rasadniksunasce/"
+      ],
+      "image": "img/img1.jpg"
+    }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <nav>
+    <nav id="navbar">
         <div class="logo">Rasadnik Sunašce</div>
-        <ul class="nav-links">
-            <li><a href="#hero">Početna</a></li>
-            <li><a href="#o-nama">O nama</a></li>
-            <li><a href="#galerija">Galerija</a></li>
-            <li><a href="#ponuda">Ponuda</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero" class="nav-link">Početna</a></li>
+            <li><a href="#o-nama" class="nav-link">O nama</a></li>
+            <li><a href="galerija.html" class="nav-link">Galerija</a></li>
+            <li><a href="#ponuda" class="nav-link">Ponuda</a></li>
+            <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
         </ul>
+        <button class="hamburger" id="hamburger" aria-label="Otvori meni">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
 
+    <!-- HERO with Slideshow -->
     <header id="hero">
-        <h1 class="fade-in">Rasadnik Sunašce</h1>
-        <p class="fade-in" style="transition-delay: 0.2s;">Priroda u vašem dvorištu</p>
-        <a href="#ponuda" class="btn fade-in" style="transition-delay: 0.4s;">Pogledaj ponudu</a>
+        <div class="hero-slides">
+            <div class="hero-slide active" style="background-image: url('img/img1.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('img/img2.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('img/img3.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('img/img5.jpg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in">Rasadnik Sunašce</h1>
+            <p class="fade-in" style="transition-delay: 0.2s;">Priroda u vašem dvorištu</p>
+            <a href="#kontakt" class="btn fade-in" style="transition-delay: 0.4s;">Kako do nas?</a>
+        </div>
+        <div class="slide-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+        </div>
     </header>
 
     <section id="o-nama" class="section-padding">
@@ -38,17 +118,17 @@
         </div>
     </section>
 
+    <!-- GALLERY - 4 slike preview -->
     <section id="galerija" class="section-padding">
         <h2>Galerija</h2>
-        <div class="gallery-grid">
+        <div class="gallery-grid gallery-preview">
             <div class="gallery-item fade-in"><img src="img/img1.jpg" alt="Biljka 1" onclick="openLightbox(this.src)"></div>
             <div class="gallery-item fade-in" style="transition-delay: 0.1s;"><img src="img/img2.jpg" alt="Biljka 2" onclick="openLightbox(this.src)"></div>
             <div class="gallery-item fade-in" style="transition-delay: 0.2s;"><img src="img/img3.jpg" alt="Biljka 3" onclick="openLightbox(this.src)"></div>
             <div class="gallery-item fade-in" style="transition-delay: 0.3s;"><img src="img/img4.jpg" alt="Biljka 4" onclick="openLightbox(this.src)"></div>
-            <div class="gallery-item fade-in" style="transition-delay: 0.4s;"><img src="img/img5.jpg" alt="Biljka 5" onclick="openLightbox(this.src)"></div>
-            <div class="gallery-item fade-in" style="transition-delay: 0.5s;"><img src="img/img6.jpg" alt="Biljka 6" onclick="openLightbox(this.src)"></div>
-            <div class="gallery-item fade-in" style="transition-delay: 0.6s;"><img src="img/img7.jpg" alt="Biljka 7" onclick="openLightbox(this.src)"></div>
-            <div class="gallery-item fade-in" style="transition-delay: 0.7s;"><img src="img/img8.jpg" alt="Biljka 8" onclick="openLightbox(this.src)"></div>
+        </div>
+        <div style="text-align:center; margin-top: 2.5rem;">
+            <a href="galerija.html" class="btn btn-outline">Pogledaj sve fotografije →</a>
         </div>
     </section>
 
@@ -75,6 +155,11 @@
                 <h3>Ukrasno bilje</h3>
                 <p>Raznovrsni četinari i grmlje za savršeno uređenje pejzaža.</p>
             </div>
+            <div class="offer-card fade-in" style="transition-delay: 0.6s;">
+                <div class="offer-icon">🌿</div>
+                <h3>I mnogo više...</h3>
+                <p>Naš asortiman se stalno obogaćuje. Kontaktirajte nas i saznajte šta trenutno imamo u ponudi!</p>
+            </div>
         </div>
     </section>
 
@@ -83,69 +168,131 @@
         <div class="contact-container fade-in">
             <div class="contact-info">
                 <h3>Informacije</h3>
-                <p><strong>📞 Telefon:</strong> +381 XX XXX XXXX</p>
-                <p><strong>📍 Lokacija:</strong> Булевар patrijarha Germana 7b, Београд 11223</p>
+                <p><strong>📞 Telefon:</strong> +381 64 4876477</p>
+                <p><strong>📍 Lokacija:</strong> Bulevar patrijarha Germana 7b, Beograd 11223</p>
                 <p>Radujemo se vašem pozivu ili poseti. Pratite nas na društvenim mrežama za najnovije ponude i savete o nezi biljaka!</p>
                 
                 <div style="margin: 1.5rem 0; border-radius: 8px; overflow: hidden;">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2835.0429776311285!2d20.504300500000003!3d44.718734399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7506626cdcad%3A0xba767908f00c46b1!2sRasadnik%20Sunasce!5e0!3m2!1ssr!2srs!4v1775667930191!5m2!1ssr!2srs" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
-                <a href="https://www.facebook.com/p/Rasadnik-Suna%C5%A1ce-100056245995645/" target="_blank" class="social-link">Posetite naš Facebook profil</a>
+                <!-- Social ikonice -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/p/Rasadnik-Suna%C5%A1ce-100056245995645/" target="_blank" class="social-btn facebook" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                        Facebook
+                    </a>
+                    <a href="https://www.instagram.com/rasadniksunasce/" target="_blank" class="social-btn instagram" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                        Instagram
+                    </a>
+                </div>
             </div>
-            <div class="contact-form">
-                <form onsubmit="event.preventDefault(); alert('Poruka je uspešno poslata!');">
-                    <div class="form-group">
-                        <input type="text" placeholder="Vaše Ime" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Vaš Telefon" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Vaša Poruka" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Pošalji poruku</button>
-                </form>
+        </div>
+    </section>
+
+    <section id="radno-vreme" class="section-padding radno-vreme-section">
+        <h2>Radno vreme</h2>
+        <div class="radno-vreme-card fade-in">
+            <div class="radno-vreme-icon">🕗</div>
+            <div class="radno-vreme-text">
+                <span class="radno-vreme-label">Svaki dan</span>
+                <span class="radno-vreme-hours">08:00 – 19:00</span>
             </div>
         </div>
     </section>
 
     <footer>
         <p>© 2026 Rasadnik Sunašce. Sva prava zadržana.</p>
-        <p><a href="https://www.facebook.com/p/Rasadnik-Suna%C5%A1ce-100056245995645/" target="_blank">Facebook</a></p>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/p/Rasadnik-Suna%C5%A1ce-100056245995645/" target="_blank" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/rasadniksunasce/" target="_blank" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+        </div>
+        <p style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;">Designed by <a href="https://612designagency.com/" target="_blank">612 Design Agency</a></p>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        // ---- HERO SLIDESHOW ----
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function goToSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = n;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            goToSlide((currentSlide + 1) % slides.length);
+        }
+
+        setInterval(nextSlide, 4000);
+
+        // ---- HAMBURGER MENU ----
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+
+        // zatvori meni na klik linka
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                hamburger.classList.remove('active');
             });
         });
 
-        // Fade-in animation on scroll using Intersection Observer
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = {
-            threshold: 0.15,
-            rootMargin: "0px 0px -50px 0px"
-        };
+        // ---- ACTIVE NAV LINK on scroll ----
+        const sections = document.querySelectorAll('section[id], header[id]');
+        const navLinksAll = document.querySelectorAll('.nav-link');
 
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        const observerOptions = { rootMargin: '-40% 0px -55% 0px' };
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinksAll.forEach(a => a.classList.remove('active-link'));
+                    const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+                    if (active) active.classList.add('active-link');
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(s => sectionObserver.observe(s));
+
+        // ---- NAVBAR SCROLL SHADOW ----
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ---- FADE-IN ----
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (!entry.isIntersecting) return;
                 entry.target.classList.add('appear');
                 observer.unobserve(entry.target);
             });
-        }, appearOptions);
+        }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
 
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
+        faders.forEach(fader => appearOnScroll.observe(fader));
 
-        // Lightbox Logic for Gallery
+        // ---- LIGHTBOX ----
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 
@@ -156,6 +303,20 @@
 
         function closeLightbox() {
             lightbox.style.display = 'none';
+        }
+
+        // ---- SMOOTH SCROLL ----
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // ---- FORM SUCCESS ----
+        function showSuccess() {
+            document.getElementById('form-success').style.display = 'block';
         }
     </script>
 </body>
