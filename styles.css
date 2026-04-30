@@ -459,6 +459,14 @@ nav.scrolled {
     gap: 10px;
 }
 
+.contact-detail {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    gap: 4px !important;
+    line-height: 1.6;
+}
+
 /* Social ikonice */
 .social-icons {
     display: flex;
@@ -620,6 +628,10 @@ footer {
 
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
+    .hero-slide {
+        background-attachment: scroll;
+    }
+
     .hamburger {
         display: flex;
     }
