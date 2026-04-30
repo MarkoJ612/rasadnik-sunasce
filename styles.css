@@ -82,6 +82,31 @@ nav.scrolled {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary-green);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-green);
+}
+
+.logo-img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--light-green);
+    display: block;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.logo-img:hover {
+    border-color: var(--primary-green);
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -392,6 +417,15 @@ nav.scrolled {
 .offer-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+.offer-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* --- CONTACT SECTION --- */
