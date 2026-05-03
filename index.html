@@ -81,6 +81,9 @@
             <li><a href="galerija.html" class="nav-link">Galerija</a></li>
             <li><a href="#ponuda" class="nav-link">Ponuda</a></li>
             <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+            <li class="nav-logo-bottom">
+                <img src="img/logo.png" alt="Rasadnik Sunašce logo" class="nav-logo-img">
+            </li>
         </ul>
         <button class="hamburger" id="hamburger" aria-label="Otvori meni">
             <span></span><span></span><span></span>
@@ -103,7 +106,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="fade-in">Rasadnik Sunašce</h1>
-            <p class="fade-in" style="transition-delay: 0.2s;">Priroda u vašem dvorištu</p>
+            <p class="fade-in" style="transition-delay: 0.2s;">📍 Avala, Beograd</p>
             <a href="#kontakt" class="btn fade-in" style="transition-delay: 0.4s;">Kako do nas?</a>
         </div>
         <div class="slide-dots">
@@ -190,6 +193,7 @@
             <div class="contact-info">
                 <h3 class="contact-detail">Informacije</h3>
                 <p class="contact-detail"><strong>📞 Telefon:</strong><br>+381 64 4876477</p>
+                <p class="contact-detail"><strong>🕗 Radno vreme:</strong><br>Svaki dan 08:00 – 19:00</p>
                 <p class="contact-detail"><strong>📍 Lokacija:</strong><br>Bulevar patrijarha Germana 7b, Beograd 11223</p>
                 <p>Radujemo se vašem pozivu ili poseti. Pratite nas na društvenim mrežama za najnovije ponude i savete o nezi biljaka!</p>
                 
@@ -214,17 +218,6 @@
                         Instagram
                     </a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="radno-vreme" class="section-padding radno-vreme-section">
-        <h2>Radno vreme</h2>
-        <div class="radno-vreme-card fade-in">
-            <div class="radno-vreme-icon">🕗</div>
-            <div class="radno-vreme-text">
-                <span class="radno-vreme-label">Svaki dan</span>
-                <span class="radno-vreme-hours">08:00 – 19:00</span>
             </div>
         </div>
     </section>
@@ -334,11 +327,6 @@
                 if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
-
-        // ---- FORM SUCCESS ----
-        function showSuccess() {
-            document.getElementById('form-success').style.display = 'block';
-        }
     </script>
 </body>
 </html>
