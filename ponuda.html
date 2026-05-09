@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponuda | Rasadnik Sunašce</title>
+    <meta name="description" content="Kompletna ponuda Rasadnika Sunašce – sezonsko cveće, sadnice, četinari, ukrasno bilje, začinsko bilje, sobne biljke i još mnogo toga. Beograd, Avala.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .ponuda-page-header {
+            padding-top: 120px;
+            padding-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+            color: var(--white);
+        }
+
+        .ponuda-page-header h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ponuda-page-header p {
+            font-weight: 300;
+            opacity: 0.85;
+            font-size: 1.1rem;
+        }
+
+        .ponuda-page-header h1::after {
+            display: none;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 1.5rem;
+            color: var(--white);
+            opacity: 0.85;
+            font-size: 0.95rem;
+            transition: opacity 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        /* Grid kategorija */
+        .ponuda-main {
+            background-color: var(--beige);
+            padding: 4rem 8%;
+        }
+
+        .ponuda-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .ponuda-card {
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ponuda-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.13);
+        }
+
+        .ponuda-card-img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .ponuda-card:hover .ponuda-card-img {
+            transform: scale(1.04);
+        }
+
+        .ponuda-card-img-wrap {
+            overflow: hidden;
+        }
+
+        .ponuda-card-body {
+            padding: 1.4rem 1.6rem 1.6rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .ponuda-card-body h3 {
+            font-size: 1.15rem;
+            color: var(--primary-green);
+            margin-bottom: 0;
+        }
+
+        .ponuda-card-body p {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .ponuda-tag {
+            display: inline-block;
+            background: var(--pale-green);
+            color: var(--primary-green);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 0.3rem;
+            width: fit-content;
+        }
+
+        /* CTA traka na dnu */
+        .ponuda-cta {
+            background-color: var(--primary-green);
+            text-align: center;
+            padding: 3.5rem 10%;
+            color: var(--white);
+        }
+
+        .ponuda-cta h2 {
+            color: var(--white);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ponuda-cta h2::after { display: none; }
+
+        .ponuda-cta p {
+            opacity: 0.85;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .btn-white {
+            background-color: var(--white);
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        .btn-white:hover {
+            background-color: var(--pale-green);
+            color: var(--primary-green);
+        }
+
+        @media (max-width: 768px) {
+            .ponuda-page-header h1 { font-size: 2rem; }
+            .ponuda-main { padding: 3rem 5%; }
+            .ponuda-grid { gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <a href="index.html#hero" class="logo">
+            <img src="img/logo.png" alt="Rasadnik Sunašce logo" class="logo-img">
+            <span class="logo-text">Sunašce</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#hero" class="nav-link">Početna</a></li>
+            <li><a href="index.html#o-nama" class="nav-link">O nama</a></li>
+            <li><a href="galerija.html" class="nav-link">Galerija</a></li>
+            <li><a href="ponuda.html" class="nav-link active-link">Ponuda</a></li>
+            <li><a href="index.html#kontakt" class="nav-link">Kontakt</a></li>
+            <li class="nav-logo-bottom">
+                <img src="img/logo.png" alt="Rasadnik Sunašce logo" class="nav-logo-img">
+            </li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Otvori meni">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="ponuda-page-header">
+        <h1>Naša ponuda</h1>
+        <p>Sve što vam je potrebno za dvorište, balkon i dom</p>
+        <a href="index.html" class="back-link">← Nazad na početnu</a>
+    </div>
+
+    <!-- PONUDA GRID -->
+    <div class="ponuda-main">
+        <div class="ponuda-grid">
+
+            <div class="ponuda-card fade-in">
+                <div class="ponuda-card-img-wrap">
+                    <img src="img/img1.jpg" alt="Sezonsko i balkonsko cveće" class="ponuda-card-img">
+                </div>
+                <div class="ponuda-card-body">
+                    <span class="ponuda-tag">Cveće</span>
+                    <h3>Sezonsko i balkonsko cveće</h3>
+                    <p>Petunie, maćuhice, begonie, pelargonie i još mnogo vrsta za živopisan balkon ili terasu tokom cele sezone.</p>
+                </div>
+            </div>
+
+            <div class="ponuda-card fade-in" style="transition-delay:0.05s">
+                <div class="ponuda-card-img-wrap">
+                    <img src="img/img2.jpg" alt="Višegodišnje cvetnice i trajnice" class="ponuda-card-img">
+                </div>
+                <div class="ponuda-card-body">
+                    <span class="ponuda-tag">Trajnice</span>
+                    <h3>Višegodišnje cvetnice i trajnice</h3>
+                    <p>Biljke koje se godinama vraćaju — rudbeckije, salvije, lavanda, hosta i druge, idealne za niskobudžetno uređenje vrta.</p>
+                </div>
+            </div>
+
+            <div class="ponuda-card fade-in" style="transition-delay:0.1s">
+                <div class="ponuda-card-img-wrap">
+                    <img src="img/img3.jpg" alt="Zimzelene biljke i žbunaste forme" class="ponuda-card-img">
+                </div>
+                <div class="ponuda-card-body">
+                    <span class="ponuda-tag">Zimzelene</span>
+                    <h3>Zimzelene biljke i žbunaste forme</h3>
+                    <p>Buksusi, šimšir, lovorovina i žbunaste forme za živice, ograde i uređene bordure koje izgledaju lepo čitave godine.</p>
+                </div>
+            </div>
+
+            <div class="ponuda-card fade-in" style="transition-delay:0.15s">
+                <div class="ponuda-card-img-wrap">
+                    <img src="img/img17.jpg" alt="Ukrasno drveće i četinari" class="ponuda-card-img">
+                </div>
+                <div class="ponuda-card-body">
+                    <span class="ponuda-tag">Drveće</span>
+                    <h3>Ukrasno drveće i četinari</h3>
+                    <p>Tuje, smrče, borovi, jele i ukrasna listopadna stabla — savršen izbor za strukturu i visinu u vašem dvorištu.</p>
+                </div>
+            </div>
+
+            <div class="ponuda-card fade-in" style="transition-delay:0.2s">
+                <div class="ponuda-card-img-wrap">
+                    <img src="img/img22.jpg" alt="Cvetno i dekorativno žbunje" class="ponuda-card-img">
+                </div>
+                <div class="ponuda-card-body">
+                    <span class="ponuda-tag">Žbunje</span>
+                    <h3>Cvetno i dekorativno žbunje</h3>
+                    <p>Ruže, forziticije, špireje, deutzije i mnoštvo drugog ukrasnog žbunja za pravo cvetno bogatstvo u prolećnim i letnjim mesecima.</p>
+                </div>
+            </div>
+
+            <div class="ponuda-card fade-in" style="transition-delay:0.25s">
+                <div class="ponuda-card-img-wrap">
+                    <img src="img/img6.jpg" alt="Puzavice i pokrivači tla" class="ponuda-card-img">
+                </div>
+                <div class="ponuda-card-body">
+                    <span class="ponuda-tag">Pokrivači</span>
+                    <h3>Puzavice i pokrivači tla</h3>
+                    <p>Bršljan, wisteria, divlje vino, vinca i drugi pokrivači koji zazelene zidove, ograde i gole površine bez mnogo truda.</p>
+                </div>
+            </div>
+
+            <div class="ponuda-card fade-in" style="transition-delay:0.3s">
+                <div class="ponuda-card-img-wrap">
+                    <img src="img/img7.jpg" alt="Ukrasne trave" class="ponuda-card-img">
+                </div>
+                <div class="ponuda-card-body">
+                    <span class="ponuda-tag">Trave</span>
+                    <h3>Ukrasne trave</h3>
+                    <p>Miscanthus, pennisetum, festuca i druge dekorativne trave koje daju dinamiku i prirodni pokret vašem vrtu.</p>
+                </div>
+            </div>
+
+            <div class="ponuda-card fade-in" style="transition-delay:0.35s">
+                <div class="ponuda-card-img-wrap">
+                    <img src="img/img8.jpg" alt="Začinsko i aromatično bilje" class="ponuda-card-img">
+                </div>
+                <div class="ponuda-card-body">
+                    <span class="ponuda-tag">Bilje</span>
+                    <h3>Začinsko i aromatično bilje</h3>
+                    <p>Bosiljak, ruzmarin, majčina dušica, menta, žalfija i još mnogo vrsta — svežina iz sopstvene bašte direktno na vaš sto.</p>
+                </div>
+            </div>
+
+            <div class="ponuda-card fade-in" style="transition-delay:0.4s">
+                <div class="ponuda-card-img-wrap">
+                    <img src="img/img9.jpg" alt="Citrusi i mediteranske biljke" class="ponuda-card-img">
+                </div>
+                <div class="ponuda-card-body">
+                    <span class="ponuda-tag">Mediteran</span>
+                    <h3>Citrusi i mediteranske biljke</h3>
+                    <p>Limun, narandža, oleander, lovor i masline u saksijama — mediteranski ugođaj za vaš balkon ili zimsku baštu.</p>
+                </div>
+            </div>
+
+            <div class="ponuda-card fade-in" style="transition-delay:0.45s">
+                <div class="ponuda-card-img-wrap">
+                    <img src="img/img10.jpg" alt="Egzotične i tropske biljke" class="ponuda-card-img">
+                </div>
+                <div class="ponuda-card-body">
+                    <span class="ponuda-tag">Egzotika</span>
+                    <h3>Egzotične i tropske biljke</h3>
+                    <p>Kanksije, palme, banana biljke i druge egzotične vrste za one koji žele nešto posebno i nesvakidašnje u svom prostoru.</p>
+                </div>
+            </div>
+
+            <div class="ponuda-card fade-in" style="transition-delay:0.5s">
+                <div class="ponuda-card-img-wrap">
+                    <img src="img/img12.jpg" alt="Sobne i saksijske biljke" class="ponuda-card-img">
+                </div>
+                <div class="ponuda-card-body">
+                    <span class="ponuda-tag">Sobne</span>
+                    <h3>Sobne i saksijske biljke</h3>
+                    <p>Fikusevi, monstera, filodendron, sukulente i kaktusi — savršeni pratilac za svaki prostor, od doma do kancelarije.</p>
+                </div>
+            </div>
+
+            <div class="ponuda-card fade-in" style="transition-delay:0.55s">
+                <div class="ponuda-card-img-wrap">
+                    <img src="img/img20.jpg" alt="Sadnice za žive ograde" class="ponuda-card-img">
+                </div>
+                <div class="ponuda-card-body">
+                    <span class="ponuda-tag">Ograde</span>
+                    <h3>Sadnice za žive ograde</h3>
+                    <p>Glog, šimšir, lonicera, thuja i drugi brzorastući šibovi idealni za prirodnu i dekorativnu živu ogradu oko vaše parcele.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="ponuda-cta fade-in">
+        <h2>Niste pronašli što tražite?</h2>
+        <p>Naš asortiman se stalno menja i obogaćuje — pozovite nas i pitajte šta trenutno imamo u ponudi.</p>
+        <a href="index.html#kontakt" class="btn btn-white">Kontaktirajte nas</a>
+    </div>
+
+    <footer>
+        <p>© 2026 Rasadnik Sunašce. Sva prava zadržana.</p>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/p/Rasadnik-Suna%C5%A1ce-100056245995645/" target="_blank" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/rasadniksunasce/" target="_blank" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+        </div>
+        <p style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;">Designed by <a href="https://612designagency.com/" target="_blank">612 Design Agency</a></p>
+    </footer>
+
+    <script>
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Fade-in
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.08 });
+        faders.forEach(f => appearOnScroll.observe(f));
+    </script>
+</body>
+</html>
